@@ -20,7 +20,7 @@ export default {
       {
         hid: 'msapplication-TileColor',
         name: 'msapplication-TileColor',
-        content: '#ffc40d'
+        content: '#3b82f6'
       },
       {
         hid: 'msapplication-config',
@@ -71,7 +71,7 @@ export default {
       },
       {
         name: 'theme-color',
-        content: '#FCD34D'
+        content: '#fff'
       }
     ]
   },
@@ -105,8 +105,8 @@ export default {
       short_name: 'Phindor Test',
       start_url: '/',
       display: 'standalone',
-      theme_color: '#FCD34D',
-      background_color: '#FCD34D',
+      theme_color: '#fff',
+      background_color: '#fff',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
       icons: [
