@@ -11,9 +11,12 @@ export default {
         hid: 'description',
         name: 'description',
         content:
-          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.'
       },
-      { name: 'format-detection', content: 'telephone=no' },
+      {
+        name: 'format-detection',
+        content: 'telephone=no'
+      },
       {
         hid: 'msapplication-TileColor',
         name: 'msapplication-TileColor',
@@ -23,11 +26,27 @@ export default {
         hid: 'msapplication-config',
         name: 'msapplication-config',
         content: '/browserconfig.xml'
-      },
+      }
     ],
     link: [
-      { rel: 'preconnect', href: 'https://fonts.gstatic.com' },
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com'
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: true
+      },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap'
+      },
+      {
+        rel: 'icon',
+        type: 'image/x-icon',
+        href: '/favicon.ico'
+      },
       {
         rel: 'apple-touch-icon',
         sizes: '180x180',
@@ -50,15 +69,16 @@ export default {
         color: '#5bbad5',
         href: '/icons/safari-pinned-tab.svg'
       },
-      { name: 'theme-color', content: '#FCD34D' }
+      {
+        name: 'theme-color',
+        content: '#FCD34D'
+      }
     ]
   },
 
-  css: [
-  ],
+  css: [],
 
-  plugins: [
-  ],
+  plugins: [],
 
   components: true,
 
@@ -105,6 +125,5 @@ export default {
     }
   },
 
-  build: {
-  }
+  build: {}
 }
