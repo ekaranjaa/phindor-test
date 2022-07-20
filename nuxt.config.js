@@ -1,4 +1,8 @@
 export default {
+  target: 'static',
+
+  ssr: true,
+
   head: {
     title: 'Phindor Test',
     meta: [
@@ -88,13 +92,10 @@ export default {
   ],
 
   modules: [
+    '@nuxtjs/pwa',
     '@nuxtjs/axios',
-    '@nuxtjs/pwa'
+    '@nuxtjs/auth-next'
   ],
-
-  axios: {
-    baseURL: '/'
-  },
 
   // PWA Configuration
   pwa: {
@@ -125,5 +126,45 @@ export default {
     }
   },
 
-  build: {}
+  env: {
+    appName: process.env.APP_NAME
+  },
+
+  axios: {
+    baseURL: process.env.API_BASE_URL
+  },
+
+  router: {
+    middleware: ['auth']
+  },
+
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/login',
+      callback: '/login',
+      home: '/'
+    },
+    strategies: {
+      local: {
+        endpoints: {
+          login: {
+            url: '/auth/login',
+            method: 'post'
+          },
+          user: {
+            url: '/auth/user',
+            method: 'get'
+          },
+          logout: {
+            url: '/auth/logout',
+            method: 'post'
+          }
+        },
+        user: {
+          property: 'data'
+        }
+      }
+    }
+  }
 }
